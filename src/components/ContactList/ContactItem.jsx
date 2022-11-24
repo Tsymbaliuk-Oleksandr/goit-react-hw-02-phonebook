@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Box } from "components/Box";
 import { Name, Number } from "./ContactItem.styled";
 
-const ContactItem = ({ id, name, number, deleteContact }) => {
+export const ContactItem = ({ id, name, number, deleteContact }) => {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
       <div>
@@ -17,7 +17,7 @@ const ContactItem = ({ id, name, number, deleteContact }) => {
   );
 };
 
-export default ContactItem;
+// export default ContactItem;
 
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,

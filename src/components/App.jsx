@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
 import { Box } from "./Box";
-import ContactList from "./ContactList";
+import { ContactList } from "./ContactList";
 import ContactForm from "./ContactForm";
 import Filter from "./Filter";
 

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { Box } from "components/Box";
-import ContactItem from "components/ContactItem";
+import { ContactItem } from "components/ContactList";
 
-const ContactList = ({ values, handleDelete }) => {
+export const ContactList = ({ values, handleDelete }) => {
   return (
     <Box display="flex" flexDirection="column" p="0px" as="ul">
       {values.map(({ id, name, number }) => {
@@ -12,7 +12,7 @@ const ContactList = ({ values, handleDelete }) => {
             id={id}
             name={name}
             number={number}
-            deleteContact={() => handleDelete(id)}
+            deleteContact={handleDelete}
           />
         );
       })}
@@ -20,7 +20,7 @@ const ContactList = ({ values, handleDelete }) => {
   );
 };
 
-export default ContactList;
+// export default ContactList;
 
 ContactList.propTypes = {
   values: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
